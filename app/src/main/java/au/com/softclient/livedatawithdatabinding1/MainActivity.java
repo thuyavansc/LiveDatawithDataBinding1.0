@@ -4,11 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.widget.Toast;
 
+import au.com.softclient.livedatawithdatabinding1.activites.FirstActivity;
 import au.com.softclient.livedatawithdatabinding1.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
@@ -54,6 +56,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //Button click -> Next Activity
+        mainBinding.button.setOnClickListener(v->{
+            startActivity(new Intent(MainActivity.this, FirstActivity.class));
+        });
 
     }
 }

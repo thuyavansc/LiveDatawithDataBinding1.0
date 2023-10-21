@@ -11,6 +11,8 @@ android {
         dataBinding = true
     }
 
+
+
     defaultConfig {
         applicationId = "au.com.softclient.livedatawithdatabinding1"
         minSdk = 24
@@ -44,4 +46,5 @@ dependencies {
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+    //implementation("androidx.databinding:databinding-compiler:7.0.3") //To Enable Data Binding in Fragment
 }

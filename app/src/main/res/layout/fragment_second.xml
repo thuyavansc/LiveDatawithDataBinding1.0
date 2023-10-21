@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+<!--            <import type="au.com.softclient.livedatawithdatabinding1.viewmodels.FirstFragViewModel" alias="fragViewModel" />-->
+            <import type="au.com.softclient.livedatawithdatabinding1.MyViewModel" alias="myViewModel" />
+            <import type="au.com.softclient.livedatawithdatabinding1.viewmodels.UserViewModel" alias="UserViewModel" />
+            <import type="au.com.softclient.livedatawithdatabinding1.viewmodels.FirstFragViewModel" alias="F1ViewModel" />
+        <import type="au.com.softclient.livedatawithdatabinding1.viewmodels.SecondFragViewModel" alias="F2ViewModel" />
+            <variable
+                name="myviewModel"
+                type="myViewModel" />
+<!--            <variable-->
+<!--                name="fViewModel"-->
+<!--                type="fragViewModel" />-->
+            <variable
+                name="userViewModel"
+                type="UserViewModel" />
+            <variable
+                name="frag1ViewModel"
+                type="F1ViewModel" />
+            <variable
+                name="frag2ViewModel"
+                type="F2ViewModel" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragments.SecondFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="This is Second Fragment"
+                android:textColor="#00BCD4"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.415" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="41dp"
+                android:text="@{frag2ViewModel.message}"
+                android:textColor="#DA0F0F"
+                android:textSize="20sp"
+                android:textStyle="bold|italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView7" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+</layout>
